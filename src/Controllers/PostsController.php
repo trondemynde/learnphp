@@ -16,7 +16,13 @@ class PostsController
     }
 
     public function show(){
-        // show single post details
+        $post = Post::find($_GET['id']);
+        if (!$post) {
+            http_response_code(404);
+            echo 'Post not found';
+            return;
+        }
+        view('posts/show', compact('post'));
     }
 
     public function store(){

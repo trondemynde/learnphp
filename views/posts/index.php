@@ -15,7 +15,7 @@
                     <td><?= $post->title ?></td>
                     <td>
                         <div class="btn-group" role="group">
-                            <a class="btn btn-info">View</a>
+                            <a class="btn btn-info" href="/posts/show?id=<?=$post->id?>">View</a>
                             <a class="btn btn-warning" href="/admin/posts/edit?id=<?=$post->id?>">Edit</a>
                             <a class="btn btn-danger" href="/admin/posts/delete?id=<?=$post->id?>">Delete</a>
                         </div>
@@ -24,7 +24,6 @@
             <?php endforeach ?>
         </tbody>
     </table>
-
 </main>
 
 <?php view('partials/footer'); ?>

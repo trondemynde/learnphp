@@ -11,7 +11,7 @@ class PublicController
     public function index()
     {
         $posts = Post::all();
-        dd($posts);
+        //dd($posts);
         view('index', compact('posts'));
     }
 

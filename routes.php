@@ -18,6 +18,8 @@ Route::get('/admin/posts/edit', [PostsController::class, 'edit']);
 Route::post('/admin/posts/edit', [PostsController::class, 'update']);
 Route::get('/admin/posts/delete', [PostsController::class, 'destroy']);
 
+Route::get('/posts/show', [PostsController::class, 'show']);
+
 Route::get('/register', [AuthController::class, 'registerForm']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'loginForm']);
